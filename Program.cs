@@ -6,20 +6,21 @@ namespace Data_e_Hora
     {
         static void Main(string[] args)
         {
-            //Operações
-            DateTime d1 = new DateTime(2001, 8, 15, 13, 45, 58, 275);
-            DateTime d10 = new DateTime(2001, 8, 15);
-            DateTime d11 = new DateTime(2001, 8, 20);
-            
-            //Operações
-            DateTime d2 = d1.AddHours(2); //Adiciona 2 horas ao horario de Date (Adiciona um TimeSpan)
-            TimeSpan t1 = d11.Subtract(d10); //Subtrai d1 de d2, usado apra achar a diferença de tempo de uma data apra outra
+            TimeSpan t1 = new TimeSpan(1, 30, 10);
+            TimeSpan t2 = new TimeSpan(0, 10, 5);
+            TimeSpan sum = t1.Add(t2); //soma o periodo de t2 a t1 - retorna um timespan
+            TimeSpan dif = t1.Subtract(t2); //subtrai t2 de t1 - retorna um timespan
+            TimeSpan mult = t2.Multiply(2.0); //multiplica o valor de t2 pelo numero do argumento - retorna um timespan
+            TimeSpan div = t2.Divide(2.0); //divide o valor de t2 pelo numero do argumento - retorna um timespan
 
 
-            //Saida de dados
-            Console.WriteLine("1) Date: " + d1) ;
-            Console.WriteLine("2) Date + 2 horas: " + d2);
-            Console.WriteLine("3) Subtract (d2-d1): " + t1);
+            Console.WriteLine(t1);
+            Console.WriteLine(t2);
+            Console.WriteLine(sum);
+            Console.WriteLine(dif);
+            Console.WriteLine(mult);
+            Console.WriteLine(div);
+            Console.WriteLine("Ola Mundo");
         }   
 
 
